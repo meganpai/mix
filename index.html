@@ -14,6 +14,7 @@
       text-align: center;
       padding-left: 10px;
       font-family: "Centaur-MT";
+      font-size: 17px;
     }
     audio {
     height: 10px;
@@ -27,7 +28,6 @@
     figcaption {
       display: inline-flex;
       align-self: center;
-      font-size: 17px;
       z-index: 1;
       position: absolute;
       pointer-events: none;
@@ -45,17 +45,31 @@
       width: 10px;
       border-radius: 50%;
       border: thin solid;
+      position: fixed;
     }
     .spacer {
       height: 100px;
     }
+    .info {
+      display: none;
+      z-index: -1;
+      padding-top: 25px;
+      position: fixed;
+    }
+    .circle:hover + .info {
+      display: block;
+    }
+
   </style>
 </head>
 <body>
 <div class="spacer"></div>
 <div class="centered">
   <div class="circle"></div>
+  <p class="info">Play List</p>
 </div>
+
+
 <br><br><br><br><br>
 <div class="centered">
   <figcaption>1. Bach</figcaption>
